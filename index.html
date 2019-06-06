@@ -1,0 +1,54 @@
+<!DOCTYPE>
+<html>
+    <head>
+        <title>Order tracker</title>
+
+        <link href="style.css" rel="Stylesheet" type="text/css"/>
+        <link href="#"/>
+        <meta charset="utf-8">
+        <meta name="viewport">
+    </head>
+
+    <body>
+        <div class="w3-container">
+            <header>
+                <h1>Track your Order</h1>
+            </header>
+        </div>
+
+        <div class="container">
+            <h2>Progress tracker</h2>
+            <p>Description</p>
+
+            <div id="progresscontainer">
+                <div id="progress"></div>
+            </div>
+
+            <div class="btn">
+                    <button onclick="progress()">click to view progress</button>
+            </div>
+
+        </div>
+            
+
+        <script>
+            function progress() {
+                var el = document.getElementById('progress');
+                var width =1;
+                var id = setinterval(frame, 10);
+
+                function frame(){
+                    if(width >= 100) {
+                        clearInterval(id);
+                    }
+
+                    else {
+                        width ++;
+                        el.style.width = width + '%';
+                    }
+                }
+            }
+        </script>
+        
+    </body>
+</html>
